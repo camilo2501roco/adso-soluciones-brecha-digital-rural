@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADSO Project: Problem-Solving Through Responsive Web Design — Addressing Connectivity Crises and Digital Exclusion in Rural Colombia.">
+    <title>ADSO Project | Connectivity Crises in Rural Colombia</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">📡</span>
+                <span class="logo-text">ADSO<span class="logo-accent">Project</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#affected">Who is Affected</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#logbook">Logbook</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <p class="hero-tag">ADSO Project 2026</p>
+            <h1 class="hero-title">
+                Connectivity Crises: <br>
+                <span class="gradient-text">The Digital Divide</span>
+            </h1>
+            <p class="hero-subtitle">
+                Problem-Solving Through Responsive Web Design in Rural Colombia
+            </p>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Instructor</span>
+                    <span class="meta-value">Helmer Duarte Murallas</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">Program</span>
+                    <span class="meta-value">Análisis y Desarrollo de Software</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">Year</span>
+                    <span class="meta-value">2026</span>
+                </div>
+            </div>
+            <a href="#problem" class="hero-cta">
+                Explore the Project
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- ========== PART 1: PROBLEM REPORT ========== -->
+    <section class="section problem-section" id="problem">
+        <div class="container">
+            <div class="section-badge">Part 1</div>
+            <h2 class="section-title">Problem Report</h2>
+
+            <div class="problem-card glass-card">
+                <div class="problem-header">
+                    <div class="problem-icon">⚠️</div>
+                    <div>
+                        <h3 class="problem-title-text">Connectivity Crises</h3>
+                        <p class="problem-subtitle-text">Weak Signal and Digital Exclusion in Rural Colombia</p>
+                    </div>
+                </div>
+                <div class="problem-context-badge">
+                    <span>📌 Context:</span> Social Context — The Digital Divide in Rural Areas
+                </div>
+            </div>
+
+            <div class="image-showcase">
+                <img src="images/hero-rural.png" alt="Aerial view of rural Colombia countryside showing the digital divide" loading="lazy">
+                <div class="image-caption">
+                    <span>The vast rural landscape of Colombia where digital connectivity remains a distant dream for millions.</span>
+                </div>
+            </div>
+
+            <!-- Why It Matters -->
+            <div class="why-matters glass-card">
+                <h3 class="card-title">
+                    <span class="title-icon">🔍</span>
+                    Why This Problem Matters
+                </h3>
+                <p class="card-text">
+                    The lack of a stable internet signal prevents rural populations from accessing essential services like 
+                    <strong>SENA platforms</strong>, <strong>virtual health appointments</strong>, and 
+                    <strong>updated market prices for crops</strong>. This technical barrier creates a 
+                    <em>"digital gap"</em> that deepens social and economic inequality between the city and the countryside.
+                </p>
+                <div class="stat-row">
+                    <div class="stat-item">
+                        <span class="stat-number">~40%</span>
+                        <span class="stat-label">of rural Colombia lacks reliable internet</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3G</span>
+                        <span class="stat-label">unstable signal is the best many areas get</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">4G coverage in the most remote departments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHO IS AFFECTED ========== -->
+    <section class="section affected-section" id="affected">
+        <div class="container">
+            <h2 class="section-title">Who is Affected?</h2>
+            <p class="section-description">
+                The digital exclusion impacts entire communities across Colombia's most remote regions.
+            </p>
+
+            <div class="affected-grid">
+                <div class="affected-card glass-card" style="--delay: 0.1s">
+                    <div class="affected-icon">🎓</div>
+                    <h4>Rural Students</h4>
+                    <p>Students in remote departments like <strong>Chocó, Guajira, and Cauca</strong> who struggle to access educational platforms and submit assignments due to non-existent or unstable internet connections.</p>
+                </div>
+                <div class="affected-card glass-card" style="--delay: 0.2s">
+                    <div class="affected-icon">🌾</div>
+                    <h4>Small-Scale Farmers</h4>
+                    <p>Local farmers and workers who <strong>depend on cellular signal</strong> for their economy — from checking market prices for crops to communicating with buyers and accessing agricultural guidance.</p>
+                </div>
+                <div class="affected-card glass-card" style="--delay: 0.3s">
+                    <div class="affected-icon">👨‍👩‍👧‍👦</div>
+                    <h4>Rural Families</h4>
+                    <p>Families living in areas where <strong>4G signal is non-existent</strong> and 3G is unstable, cutting them off from telemedicine, government services, and digital financial tools.</p>
+                </div>
+            </div>
+
+            <div class="image-showcase compact">
+                <img src="images/student-signal.png" alt="A student in rural Colombia trying to get signal on a hillside" loading="lazy">
+                <div class="image-caption">
+                    <span>Students often climb hills just to get a bar of signal to send a homework assignment.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROPOSED SOLUTIONS ========== -->
+    <section class="section solutions-section" id="solutions">
+        <div class="container">
+            <div class="section-badge">Proposed Solutions</div>
+            <h2 class="section-title">Bridging the Digital Gap</h2>
+            <p class="section-description">
+                Three practical, technology-driven solutions designed to work even with the most limited connectivity.
+            </p>
+
+            <div class="solutions-grid">
+                <!-- Solution 1 -->
+                <div class="solution-card glass-card" style="--delay: 0.1s">
+                    <div class="solution-number">01</div>
+                    <div class="solution-icon-wrap">
+                        <span class="solution-icon">📱</span>
+                    </div>
+                    <h4 class="solution-title">Low-Bandwidth Information Hub</h4>
+                    <p class="solution-desc">
+                        A responsive website built with <strong>"mobile-first"</strong> principles, optimized to load text and essential content even with a <strong>2G/3G signal</strong>. Minimal images, compressed assets, and progressive loading ensure accessibility for all.
+                    </p>
+                    <div class="solution-tags">
+                        <span class="tag">Mobile-First</span>
+                        <span class="tag">2G Optimized</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="solution-card glass-card" style="--delay: 0.2s">
+                    <div class="solution-number">02</div>
+                    <div class="solution-icon-wrap">
+                        <span class="solution-icon">💬</span>
+                    </div>
+                    <h4 class="solution-title">SMS/USSD Service Directory</h4>
+                    <p class="solution-desc">
+                        A section within the web portal that teaches users how to access <strong>government information via text protocols</strong> when data is unavailable. Works on any basic phone without internet access.
+                    </p>
+                    <div class="solution-tags">
+                        <span class="tag">SMS Protocol</span>
+                        <span class="tag">No Data Required</span>
+                        <span class="tag">Universal Access</span>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="solution-card glass-card" style="--delay: 0.3s">
+                    <div class="solution-number">03</div>
+                    <div class="solution-icon-wrap">
+                        <span class="solution-icon">📥</span>
+                    </div>
+                    <h4 class="solution-title">Downloadable Resource Center</h4>
+                    <p class="solution-desc">
+                        A library of educational materials designed to be <strong>downloaded once</strong> at a "Punto Vive Digital" and used later <strong>offline</strong>. PDFs, guides, and tutorial content available without persistent connectivity.
+                    </p>
+                    <div class="solution-tags">
+                        <span class="tag">Offline Access</span>
+                        <span class="tag">Punto Vive Digital</span>
+                        <span class="tag">Educational</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-showcase compact">
+                <img src="images/solutions.png" alt="Infographic illustrating the three proposed solutions" loading="lazy">
+                <div class="image-caption">
+                    <span>Three pillars of digital inclusion: lightweight web, SMS services, and offline resources.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOGBOOK ========== -->
+    <section class="section logbook-section" id="logbook">
+        <div class="container">
+            <div class="section-badge">Part 2</div>
+            <h2 class="section-title">Logbook Entry #1</h2>
+            <p class="section-description">Project Moment 1: Problem Exploration & Initial Brainstorming.</p>
+
+            <div class="logbook-report glass-card">
+                <div class="report-grid">
+                    <div class="report-item">
+                        <h4><span class="report-icon">📝</span> Problem Description</h4>
+                        <p>The persistence of a deep digital gap in rural Colombia, characterized by 2G/3G signal instability and 4G non-existence, which isolates communities from development.</p>
+                    </div>
+                    <div class="report-item">
+                        <h4><span class="report-icon">🌍</span> Context & Relevance</h4>
+                        <p>In "Colombia Profunda", connectivity is a luxury. Students must climb hills for signals, making SENA platforms and essential health services inaccessible, deepening social inequality.</p>
+                    </div>
+                    <div class="report-item">
+                        <h4><span class="report-icon">💡</span> Brainstormed Solutions</h4>
+                        <ul class="report-list">
+                            <li>Low-Bandwidth Mobile Portal</li>
+                            <li>SMS/USSD Information Protocols</li>
+                            <li>Offline Educational Resource Library</li>
+                        </ul>
+                    </div>
+                    <div class="report-item">
+                        <h4><span class="report-icon">❓</span> Doubts & Questions</h4>
+                        <p>How to ensure high performance on 2G equipment? Can we implement PWA (Progressive Web Apps) for effective offline storage?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT FORM ========== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-description">Send us your feedback or questions about the project.</p>
+
+            <div class="contact-card glass-card">
+                <form class="contact-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="hero-cta btn-submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="section team-section" id="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-description">
+                The students behind this project, united by a shared commitment to digital inclusion.
+            </p>
+
+            <div class="team-grid">
+                <div class="team-card glass-card" style="--delay: 0.1s">
+                    <div class="team-avatar">JG</div>
+                    <h4 class="team-name">Jeison Gelves</h4>
+                    <p class="team-role">Software Developer</p>
+                </div>
+                <div class="team-card glass-card" style="--delay: 0.2s">
+                    <div class="team-avatar">SG</div>
+                    <h4 class="team-name">Santiago Gallo</h4>
+                    <p class="team-role">Software Developer</p>
+                </div>
+                <div class="team-card glass-card" style="--delay: 0.3s">
+                    <div class="team-avatar">JC</div>
+                    <h4 class="team-name">Jaider Cala</h4>
+                    <p class="team-role">Software Developer</p>
+                </div>
+            </div>
+
+            <div class="program-info glass-card">
+                <div class="program-detail">
+                    <span class="program-label">Program</span>
+                    <span class="program-value">Análisis y Desarrollo de Software (ADSO)</span>
+                </div>
+                <div class="program-detail">
+                    <span class="program-label">Institution</span>
+                    <span class="program-value">SENA</span>
+                </div>
+                <div class="program-detail">
+                    <span class="program-label">Instructor</span>
+                    <span class="program-value">Helmer Duarte Murallas</span>
+                </div>
+                <div class="program-detail">
+                    <span class="program-label">Year</span>
+                    <span class="program-value">2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">📡</span>
+                    <span class="logo-text">ADSO<span class="logo-accent">Project</span></span>
+                </div>
+                <p class="footer-text">
+                    &copy; 2026 — Connectivity Crises Project. Built with 💚 for Rural Colombia.
+                </p>
+                <p class="footer-credits">
+                    Jeison Gelves &bull; Santiago Gallo &bull; Jaider Cala
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Navbar scroll effect =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ===== Mobile nav toggle =====
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ===== Smooth scroll =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== Scroll reveal animations =====
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card, .image-showcase, .section-title, .section-badge, .section-description').forEach(el => {
+            el.classList.add('reveal-on-scroll');
+            observer.observe(el);
+        });
+
+        // ===== Floating particles in hero =====
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particle.style.animationDuration = (4 + Math.random() * 6) + 's';
+            particle.style.width = particle.style.height = (2 + Math.random() * 4) + 'px';
+            particlesContainer.appendChild(particle);
+        }
+
+        // ===== Contact Form Simulation =====
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitBtn = contactForm.querySelector('.btn-submit');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.disabled = true;
+
+                // Simulate network delay
+                setTimeout(() => {
+                    alert('¡Mensaje enviado con éxito! Nos pondremos en contacto pronto con el equipo de ADSO.');
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+        }
+    </script>
+
+</body>
+</html>
