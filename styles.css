@@ -23,7 +23,6 @@
     --clr-warning: #f59e0b;
     --clr-danger: #ef4444;
 
-    /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-display: 'Playfair Display', Georgia, serif;
 
@@ -36,7 +35,6 @@
     --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
@@ -44,7 +42,9 @@
 }
 
 /* ===== Reset & Base ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -229,8 +229,17 @@ a {
 }
 
 @keyframes floatParticle {
-    0%, 100% { transform: translateY(0) translateX(0); opacity: 0.1; }
-    50% { transform: translateY(-30px) translateX(15px); opacity: 0.3; }
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: translateY(-30px) translateX(15px);
+        opacity: 0.3;
+    }
 }
 
 .hero-content {
@@ -265,10 +274,11 @@ a {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--clr-gradient-start), var(--clr-gradient-mid), var(--clr-gradient-end));
+    /* background: linear-gradient(135deg, var(--clr-gradient-start), var(--clr-gradient-mid), var(--clr-gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background-clip: text; */
+    color: var(--clr-accent);
 }
 
 .hero-subtitle {
@@ -328,8 +338,8 @@ a {
     font-size: 0.95rem;
     border-radius: 100px;
     transition: all var(--transition-smooth);
-    animation: fadeInUp 0.8s ease 0.6s forwards;
-    opacity: 0;
+    /* animation: fadeInUp 0.8s ease 0.6s forwards;
+    opacity: 0; */
     box-shadow: 0 4px 24px rgba(16, 185, 129, 0.3);
 }
 
@@ -343,8 +353,15 @@ a {
 }
 
 @keyframes bounceDown {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(4px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
 }
 
 .hero-scroll-indicator {
@@ -362,14 +379,28 @@ a {
 }
 
 @keyframes scrollPulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.8; }
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
 }
 
 /* ===== KEYFRAMES ===== */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===== SECTIONS ===== */
@@ -407,13 +438,20 @@ a {
     margin-bottom: 56px;
 }
 
+/* =========================================================
+   INICIO DE SECCIÓN OCULTA PARA MOSTRAR AVANCE DE PROYECTO
+   (Para restaurar el diseño al 100%, simplemente elimina o comenta la línea @media y su llave de cierre al final del archivo)
+   ========================================================= */
+ /*@media (max-width: 0px) {
+
 /* ===== GLASS CARDS ===== */
 .glass-card {
     background: var(--clr-glass);
     border: 1px solid var(--clr-glass-border);
     border-radius: var(--radius-lg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); */
+    background: rgba(255, 255, 255, 0.08); /* Fondo sólido semi-transparente sin blur */
     transition: all var(--transition-smooth);
 }
 
@@ -485,13 +523,14 @@ a {
     overflow: hidden;
     margin: 48px auto;
     position: relative;
-    max-width: 800px; /* Reduced size */
+    max-width: 800px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .image-showcase.compact {
     margin: 40px auto 0;
-    max-width: 600px; /* Even smaller for compact ones */
+    max-width: 600px;
+    /* Even smaller for compact ones */
 }
 
 .image-showcase img {
@@ -864,11 +903,13 @@ a {
 
 /* ===== TEAM SECTION ===== */
 @media (max-width: 768px) {
+
     .report-grid,
     .form-grid {
         grid-template-columns: 1fr;
     }
 }
+
 .team-section {
     background: var(--clr-bg);
 }
@@ -982,6 +1023,7 @@ a {
 
 /* Tablet */
 @media (max-width: 900px) {
+
     .solutions-grid,
     .affected-grid,
     .team-grid {
@@ -1118,3 +1160,5 @@ a {
         letter-spacing: 2px;
     }
 }
+
+ /* FIN DE SECCIÓN OCULTA - Elimina esta llave para volver al diseño completo */
