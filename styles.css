@@ -403,6 +403,51 @@ a {
     }
 }
 
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes borderGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes pulseGlow {
+    0%, 100% {
+        text-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        text-shadow: 0 0 24px rgba(16, 185, 129, 0.7), 0 0 48px rgba(6, 182, 212, 0.4);
+        transform: scale(1.12);
+    }
+}
+
+/* ===== EFECTO 4: Shimmer / brillo deslizante en badges ===== */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
 /* ===== SECTIONS ===== */
 .section {
     padding: var(--section-padding);
@@ -418,7 +463,15 @@ a {
     color: var(--clr-accent);
     margin-bottom: 16px;
     padding: 5px 16px;
-    background: rgba(16, 185, 129, 0.08);
+    
+    background: linear-gradient(
+        90deg,
+        rgba(16, 185, 129, 0.08) 0%,
+        rgba(16, 185, 129, 0.25) 50%,
+        rgba(16, 185, 129, 0.08) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
     border: 1px solid rgba(16, 185, 129, 0.2);
     border-radius: 100px;
 }
@@ -449,15 +502,14 @@ a {
     background: var(--clr-glass);
     border: 1px solid var(--clr-glass-border);
     border-radius: var(--radius-lg);
-    /* backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); */
-    background: rgba(255, 255, 255, 0.08); /* Fondo sólido semi-transparente sin blur */
+   
+    background: rgba(255, 255, 255, 0.08); 
     transition: all var(--transition-smooth);
 }
 
 .glass-card:hover {
     border-color: rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.009);
 }
 
 /* ===== SCROLL REVEAL ===== */
@@ -657,6 +709,18 @@ a {
     position: relative;
     overflow: hidden;
     transition-delay: var(--delay, 0s);
+ 
+    border-image: linear-gradient(
+        90deg,
+        rgba(16, 185, 129, 0.1),
+        rgba(6, 182, 212, 0.5),
+        rgba(139, 92, 246, 0.5),
+        rgba(16, 185, 129, 0.1)
+    ) 1;
+    border-width: 1px;
+    border-style: solid;
+    background-size: 300% 300%;
+    animation: borderGlow 4s ease infinite;
 }
 
 .solution-card::before {
@@ -690,6 +754,9 @@ a {
 
 .solution-icon {
     font-size: 2.5rem;
+
+    display: inline-block;
+    animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
 .solution-title {
@@ -944,6 +1011,13 @@ a {
     color: #fff;
     margin: 0 auto 20px;
     box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+    /* EFECTO 1: Rotación 360° al pasar el cursor */
+    transition: transform 0.6s ease;
+}
+
+.team-avatar:hover {
+    animation: rotate360 0.6s ease-in-out;
+    box-shadow: 0 4px 30px rgba(16, 185, 129, 0.5);
 }
 
 .team-name {
